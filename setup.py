@@ -13,6 +13,7 @@ install_requires = [
     'djed.message',
     'pyramid',
     'pyramid_chameleon',
+    'pytz',
     ]
 
 tests_require = install_requires + [
