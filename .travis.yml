@@ -1,0 +1,14 @@
+language: python
+python:
+  - 3.3
+  - 3.4
+
+install:
+  - pip install -e git+git://github.com/djedproject/djed.templates#egg=djed.templates
+  - pip install -e git+git://github.com/djedproject/djed.message#egg=djed.message
+  - python setup.py develop --allow-hosts='pypi.python.org'
+
+script:
+  - python setup.py test
+notifications:
+  email: false
