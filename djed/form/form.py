@@ -91,37 +91,8 @@ class FormViewMapper(DefaultViewMapper):
     def __init__(self, **kw):
         super(FormViewMapper, self).__init__(**kw)
 
-        renderer = kw.get('renderer')
-#        is_layout = isinstance(renderer, layout)
-
-#        if is_layout and not (renderer.name or renderer.renderer):
-#            self.map_class_native = self.map_class_native_layout
-
-#        elif is_layout and renderer.name:
-#            self.map_class_native = self.map_class_native_update
-
-#        elif not is_layout and not (renderer is None or
-#                  isinstance(renderer, NullRendererHelper)):
-#            self.map_class_native = self.map_class_native_update
-        if renderer:
+        if kw.get('renderer'):
             self.map_class_native = self.map_class_native_update
-
-#    def map_class_native_layout(self, form_view):
-#        def _class_view(context, request, _view=form_view):
-#            inst = _view(context, request)
-#            request.__original_view__ = inst
-
-#            try:
-#                result = inst.update_form()
-#                if result is None:
-#                    result = {}
-#            except HTTPResponseIsReady as result:
-#                return result.args[0]
-#            except HTTPException as result:
-#                return result
-
-#            return inst.render()
-#        return _class_view
 
     def map_class_native_update(self, form_view):
         def _class_view(context, request, _view=form_view):
