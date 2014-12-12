@@ -1,4 +1,4 @@
-<select id="${context.id}" name="${context.name}"
+<select id="${context.id}" name="${context.name}" multiple="${context.multiple}"
         class="${context.klass}" title="${context.title}"
         tal:attributes="context.get_html_attrs()">
     <option tal:repeat="item context.items" id="${item['id']}" value="${item['value']}"

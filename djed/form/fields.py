@@ -485,7 +485,7 @@ class ChoiceField(BaseChoiceField):
 
 
 @field('multiselect')
-class MultiSelectField(ChoiceField):
+class MultiSelectField(BaseMultiChoiceField):
     """HTML Multi Select input widget. Field name is ``multiselect``.
 
     Extra params:
@@ -494,7 +494,9 @@ class MultiSelectField(ChoiceField):
     """
 
     size = 5
+    klass = 'form-control select-widget'
     multiple = 'multiple'
+    tmpl_input = 'form:select'
 
 
 @field('timezone')
