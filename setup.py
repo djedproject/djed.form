@@ -24,7 +24,7 @@ tests_require = install_requires + [
 
 setup(name='djed.form',
       version='0.0',
-      description='djed.form',
+      description='Form generation library for Pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Framework :: Pyramid",
