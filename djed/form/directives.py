@@ -92,7 +92,7 @@ class fieldpreview(object):
 
           widget = field.bind(request, 'preview.', form.null, {})
           widget.update()
-          return djed.templates.render(request, 'form:widget', widget)
+          return djed.renderer.render(request, 'form:widget', widget)
 
     """
     def __init__(self, cls):

@@ -7,7 +7,7 @@ from pyramid.renderers import NullRendererHelper
 from pyramid.interfaces import IResponse
 from pyramid.httpexceptions import HTTPException, HTTPForbidden
 from pyramid.config.views import DefaultViewMapper
-from djed.templates import render, template_filter
+from djed.renderer import render, template_filter
 from djed.message import add_message
 
 from djed.form.field import Field

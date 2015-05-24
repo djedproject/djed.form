@@ -110,7 +110,7 @@ from djed.form.iso8601 import parse_date
 
 def includeme(config):
     config.include('pyramid_chameleon')
-    config.include('djed.templates')
+    config.include('djed.renderer')
     config.include('djed.message')
 
     # field
