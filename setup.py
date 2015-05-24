@@ -16,7 +16,7 @@ install_requires = [
     'pytz',
 ]
 
-tests_require = install_requires + [
+tests_require = [
     'nose',
     'webtest',
 ]
@@ -44,6 +44,8 @@ setup(
     packages=['djed.form'],
     include_package_data=True,
     install_requires=install_requires,
-    tests_require=tests_require,
+    extras_require={
+        'testing': tests_require,
+    },
     test_suite='nose.collector',
 )
