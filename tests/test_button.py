@@ -1,4 +1,4 @@
-from base import strip, BaseTestCase, TestCase
+from .base import strip, BaseTestCase, TestCase
 
 
 class TestButton(BaseTestCase):

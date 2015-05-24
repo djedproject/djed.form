@@ -2,7 +2,7 @@
 Unit tests for L{djed.form.fieldset}
 """
 import djed.form
-from base import BaseTestCase
+from .base import BaseTestCase
 
 
 field = djed.form.TextField(

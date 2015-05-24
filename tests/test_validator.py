@@ -1,4 +1,4 @@
-from base import TestCase, BaseTestCase
+from .base import TestCase, BaseTestCase
 
 
 def invalid_exc(func, *arg, **kw):

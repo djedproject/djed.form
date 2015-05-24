@@ -1,6 +1,6 @@
 from unittest import mock
 import djed.form
-from base import TestCase, BaseTestCase
+from .base import TestCase, BaseTestCase
 
 
 class TestCompositeError(TestCase):

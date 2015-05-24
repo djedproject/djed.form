@@ -5,7 +5,7 @@ from pyramid.testing import DummyRequest
 from pyramid.httpexceptions import HTTPFound, HTTPForbidden
 
 import djed.form
-from base import BaseTestCase, TestCase
+from .base import BaseTestCase, TestCase
 
 
 class TestFormWidgets(TestCase):
@@ -319,7 +319,7 @@ class TestForm(BaseTestCase):
 
         self.config.add_view(
             name='test', view=CustomForm,
-            renderer='djed.form:tests/test-form.pt')
+            renderer='tests:test-form.pt')
 
         resp = render_view_to_response(None, request, 'test', False).body
 
@@ -351,7 +351,7 @@ class TestForm(BaseTestCase):
 
         self.config.add_view(
             name='test', view=CustomForm,
-            renderer='djed.form:tests/test-form.pt')
+            renderer='tests:test-form.pt')
 
         resp = render_view_to_response(None, request, 'test', False)
         self.assertIsInstance(resp, HTTPFound)
@@ -367,7 +367,7 @@ class TestForm(BaseTestCase):
 
         self.config.add_view(
             name='test', view=CustomForm,
-            renderer='djed.form:tests/test-form.pt')
+            renderer='tests:test-form.pt')
 
         resp = render_view_to_response(None, self.request, 'test', False)
         self.assertIn('<h1>Custom form</h1>', str(resp))
@@ -385,7 +385,7 @@ class TestForm(BaseTestCase):
 
         self.config.add_view(
             name='test', view=CustomForm,
-            renderer='djed.form:tests/test-form.pt')
+            renderer='tests:test-form.pt')
 
         resp = render_view_to_response(None, request, 'test', False)
         self.assertIsInstance(resp, HTTPFound)

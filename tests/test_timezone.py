@@ -1,6 +1,6 @@
 import pytz
 from datetime import datetime
-from base import BaseTestCase
+from .base import BaseTestCase
 
 
 class TestTimezoneField(BaseTestCase):

@@ -3,7 +3,7 @@ import djed.form
 from pyramid.config import Configurator
 from pyramid.exceptions import ConfigurationConflictError
 
-from base import BaseTestCase
+from .base import BaseTestCase
 
 
 class TestFieldset(BaseTestCase):

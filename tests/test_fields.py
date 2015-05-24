@@ -6,7 +6,7 @@ from pyramid.compat import text_type, NativeIO
 import djed.form
 from djed.form import iso8601
 
-from base import strip, BaseTestCase
+from .base import strip, BaseTestCase
 
 
 def invalid_exc(func, *arg, **kw):

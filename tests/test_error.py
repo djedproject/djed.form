@@ -1,5 +1,5 @@
 """ Tests for L{djed.form.interfaces.Invalid} """
-from base import TestCase, BaseTestCase
+from .base import TestCase, BaseTestCase
 
 
 class TestInvalid(BaseTestCase):

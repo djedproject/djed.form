@@ -1,7 +1,7 @@
 from pyramid.testing import DummyRequest
 
 import djed.form
-from base import BaseTestCase
+from .base import BaseTestCase
 
 
 field = djed.form.TextField(
