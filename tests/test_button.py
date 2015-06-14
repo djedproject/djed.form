@@ -1,4 +1,4 @@
-from .base import strip, BaseTestCase, TestCase
+from .base import BaseTestCase, TestCase
 
 
 class TestButton(BaseTestCase):
@@ -61,7 +61,7 @@ class TestButton(BaseTestCase):
 
         widget = btn.bind(request, 'test.', params, context)
         self.assertEqual(
-            strip(widget.render().strip()),
+            widget.render().strip(),
             '<input type="submit" class="btn btn-primary" value="Test" id="test-test" name="test.test" title="Title">')
 
     def test_execute(self):

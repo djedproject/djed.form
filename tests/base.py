@@ -6,10 +6,6 @@ from pyramid.interfaces import IRequest
 from pyramid.interfaces import IRequestExtensions
 
 
-def strip(text):
-    return ' '.join([s.strip() for s in text.split('\n')])
-
-
 class BaseTestCase(TestCase):
 
     _includes = ('djed.form',)
