@@ -1,6 +1,6 @@
 """Test of the Vocabulary and related support APIs."""
 from djed.form import vocabulary
-from .base import TestCase
+from djed.testing import TestCase
 
 
 class VocabularyTests(TestCase):

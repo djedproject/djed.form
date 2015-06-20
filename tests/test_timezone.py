@@ -1,9 +1,11 @@
 import pytz
 from datetime import datetime
-from .base import BaseTestCase
+from djed.testing import BaseTestCase
 
 
 class TestTimezoneField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_timezone_schema_to_form(self):
         from djed.form import null, TimezoneField

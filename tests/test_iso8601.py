@@ -1,7 +1,7 @@
 import datetime
 from djed.form import iso8601
 
-from .base import TestCase
+from djed.testing import TestCase
 
 
 class TestISO8601(TestCase):

@@ -3,10 +3,12 @@ import djed.form
 from pyramid.config import Configurator
 from pyramid.exceptions import ConfigurationConflictError
 
-from .base import BaseTestCase
+from djed.testing import BaseTestCase
 
 
 class TestFieldset(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     @mock.patch('djed.form.directives.venusian')
     def test_declarative(self, m_venusian):

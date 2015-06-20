@@ -1,6 +1,6 @@
 from unittest import mock
 import djed.form
-from .base import TestCase, BaseTestCase
+from djed.testing import TestCase, BaseTestCase
 
 
 class TestCompositeError(TestCase):
@@ -17,6 +17,8 @@ class TestCompositeError(TestCase):
 
 class TestCompositeField(BaseTestCase):
     """ Tests for djed.form.CompositeField """
+
+    _includes = ('djed.form',)
 
     def test_ctor(self):
         """ Composite field requires fields """

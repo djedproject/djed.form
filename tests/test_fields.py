@@ -6,7 +6,7 @@ from pyramid.compat import text_type, NativeIO
 import djed.form
 from djed.form import iso8601
 
-from .base import BaseTestCase
+from djed.testing import BaseTestCase
 
 
 def invalid_exc(func, *arg, **kw):
@@ -20,6 +20,8 @@ def invalid_exc(func, *arg, **kw):
 
 
 class TestInputField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         from djed.form.fields import InputField
@@ -41,6 +43,8 @@ class TestInputField(BaseTestCase):
 
 
 class TestTextField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         return djed.form.TextField(name, title=name.capitalize(), **kw)
@@ -72,6 +76,8 @@ class TestTextField(BaseTestCase):
 
 class TestIntegerField(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name, **kw):
         return djed.form.IntegerField(name, title=name.capitalize(), **kw)
 
@@ -96,6 +102,8 @@ class TestIntegerField(BaseTestCase):
 
 
 class TestFloatField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         return djed.form.FloatField(name, title=name.capitalize(), **kw)
@@ -122,6 +130,8 @@ class TestFloatField(BaseTestCase):
 
 class TestDeciamlField(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name, **kw):
         return djed.form.DecimalField(name, title=name.capitalize(), **kw)
 
@@ -147,6 +157,8 @@ class TestDeciamlField(BaseTestCase):
 
 class TestLinesField(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name, **kw):
         return djed.form.LinesField(name, title=name.capitalize(), **kw)
 
@@ -171,6 +183,8 @@ class TestLinesField(BaseTestCase):
 
 
 class TestVocabularyField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_ctor(self):
         from djed.form.fields import VocabularyField
@@ -338,6 +352,8 @@ class TestVocabularyField(BaseTestCase):
 
 class TestBaseChoiceField(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name, **kw):
         return djed.form.BaseChoiceField(name, **kw)
 
@@ -372,6 +388,8 @@ class TestBaseChoiceField(BaseTestCase):
 
 
 class TestBaseMultiChoiceField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         return djed.form.BaseMultiChoiceField(name, **kw)
@@ -415,6 +433,8 @@ class TestBaseMultiChoiceField(BaseTestCase):
 
 
 class TestChoiceField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         return djed.form.ChoiceField(name, **kw)
@@ -473,6 +493,8 @@ class TestChoiceField(BaseTestCase):
 
 class TestMultiChoiceField(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name, **kw):
         return djed.form.MultiChoiceField(name, **kw)
 
@@ -490,6 +512,9 @@ class TestMultiChoiceField(BaseTestCase):
 
 
 class TestDateTime(BaseTestCase):
+
+    _includes = ('djed.form',)
+
     def _makeOne(self, name='test', *arg, **kw):
         return djed.form.DateTimeField(name, request=self.request, *arg, **kw)
 
@@ -605,6 +630,8 @@ class TestDateTime(BaseTestCase):
 
 class TestDate(BaseTestCase):
 
+    _includes = ('djed.form',)
+
     def _makeOne(self, name='test', *arg, **kw):
         return djed.form.DateField(name, request=self.request, *arg, **kw)
 
@@ -677,6 +704,8 @@ class TestDate(BaseTestCase):
 
 
 class TestFileField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def _makeOne(self, name, **kw):
         from djed.form.fields import FileField
@@ -787,6 +816,8 @@ class TestFileField(BaseTestCase):
 
 
 class TestOptionsField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_ctor(self):
         field = djed.form.OptionsField(

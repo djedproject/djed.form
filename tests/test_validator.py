@@ -1,4 +1,4 @@
-from .base import TestCase, BaseTestCase
+from djed.testing import TestCase, BaseTestCase
 
 
 def invalid_exc(func, *arg, **kw):
@@ -192,6 +192,9 @@ class TestLength(TestCase):
         self.assertEqual(e.msg.interpolate(), 'Longer than maximum length 1')
 
 class TestOneOf(BaseTestCase):
+
+    _includes = ('djed.form',)
+
     def _makeOne(self, values):
         from djed.form import OneOf
         return OneOf(values)

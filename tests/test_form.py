@@ -5,7 +5,7 @@ from pyramid.testing import DummyRequest
 from pyramid.httpexceptions import HTTPFound, HTTPForbidden
 
 import djed.form
-from .base import BaseTestCase, TestCase
+from djed.testing import BaseTestCase, TestCase
 
 
 class TestFormWidgets(TestCase):
@@ -42,6 +42,8 @@ class TestFormWidgets(TestCase):
 
 
 class TestFormErrors(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_form_errors(self):
         from djed.form import Invalid, TextField
@@ -96,6 +98,8 @@ class TestFormErrors(BaseTestCase):
 
 
 class TestForm(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_ctor_kwargs(self):
         """ Pass keyword arguments to Form ctor """

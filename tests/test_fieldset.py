@@ -2,7 +2,7 @@
 Unit tests for L{djed.form.fieldset}
 """
 import djed.form
-from .base import BaseTestCase
+from djed.testing import BaseTestCase
 
 
 field = djed.form.TextField(
@@ -13,6 +13,8 @@ field1 = djed.form.TextField(
 
 
 class TestFieldset(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_fieldset_name_title(self):
         fieldset = djed.form.Fieldset(field)
@@ -269,6 +271,8 @@ class TestFieldset(BaseTestCase):
 
 
 class TestFieldsetErrors(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_fieldset_errors(self):
         err1 = djed.form.Invalid('error1', field.bind(self.request,'','',{}))

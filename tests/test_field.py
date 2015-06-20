@@ -1,7 +1,7 @@
 from pyramid.testing import DummyRequest
 
 import djed.form
-from .base import BaseTestCase
+from djed.testing import BaseTestCase
 
 
 field = djed.form.TextField(
@@ -12,6 +12,8 @@ field1 = djed.form.TextField(
 
 
 class TestField(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_field_ctor(self):
         field = djed.form.Field('test', **{'title': 'Title',
@@ -206,6 +208,8 @@ class TestField(BaseTestCase):
 
 
 class TestFieldFactory(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_field_factory(self):
         class MyField(djed.form.Field):

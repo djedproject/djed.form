@@ -1,8 +1,10 @@
 """ Tests for L{djed.form.interfaces.Invalid} """
-from .base import TestCase, BaseTestCase
+from djed.testing import TestCase, BaseTestCase
 
 
 class TestInvalid(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_ctor_default(self):
         from djed.form import Invalid

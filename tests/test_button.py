@@ -1,7 +1,9 @@
-from .base import BaseTestCase, TestCase
+from djed.testing import BaseTestCase, TestCase
 
 
 class TestButton(BaseTestCase):
+
+    _includes = ('djed.form',)
 
     def test_ctor(self):
         import djed.form
