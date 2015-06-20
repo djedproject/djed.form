@@ -3,9 +3,9 @@ import copy
 from collections import OrderedDict
 from pyramid.compat import text_type, string_types
 
-from djed.form.field import Field
-from djed.form.validator import All
-from djed.form.interfaces import null, Invalid
+from .field import Field
+from .validator import All
+from .interfaces import null, Invalid
 
 
 class Fieldset(OrderedDict):

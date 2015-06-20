@@ -1,7 +1,7 @@
 """ Code from `colander` package """
 import re
 from pyramid.compat import string_types
-from djed.form.interfaces import _, Invalid
+from .interfaces import _, Invalid
 
 
 class All(object):

@@ -1,7 +1,7 @@
 import logging
 from collections import OrderedDict
 from djed.renderer import render
-from djed.form.interfaces import _, null, Invalid
+from .interfaces import _, null, Invalid
 
 log = logging.getLogger('djed.form')
 

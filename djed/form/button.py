@@ -3,7 +3,7 @@ import re
 import sys
 import binascii
 from collections import OrderedDict
-from djed.form.field import InputField
+from .field import InputField
 
 AC_DEFAULT = 0
 AC_PRIMARY = 1

@@ -3,9 +3,9 @@ import copy
 import pprint
 from pyramid.decorator import reify
 
-from djed.form.field import Field
-from djed.form.fieldset import Fieldset
-from djed.form.interfaces import null, Invalid
+from .field import Field
+from .fieldset import Fieldset
+from .interfaces import null, Invalid
 
 
 class CompositeError(Invalid):

@@ -10,10 +10,10 @@ from pyramid.config.views import DefaultViewMapper
 from djed.renderer import render, template_filter
 from djed.message import add_message
 
-from djed.form.field import Field
-from djed.form.fieldset import Fieldset
-from djed.form.button import Buttons, Actions
-from djed.form.interfaces import Invalid, HTTPResponseIsReady
+from .field import Field
+from .fieldset import Fieldset
+from .button import Buttons, Actions
+from .interfaces import Invalid, HTTPResponseIsReady
 
 
 @template_filter('form:error')

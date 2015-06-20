@@ -1,6 +1,6 @@
 from zope.interface import implementer
 from pyramid.compat import string_types
-from djed.form.interfaces import ITerm, IVocabulary
+from .interfaces import ITerm, IVocabulary
 
 
 @implementer(ITerm)

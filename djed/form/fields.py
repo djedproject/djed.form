@@ -5,13 +5,13 @@ import datetime
 import decimal
 from pyramid.compat import NativeIO
 
-from djed.form import iso8601
-from djed.form import vocabulary
-from djed.form.field import InputField
-from djed.form.fieldset import Fieldset
-from djed.form.directives import field
-from djed.form.composite import CompositeField
-from djed.form.interfaces import _, null, Invalid, IVocabulary
+from . import iso8601
+from . import vocabulary
+from .field import InputField
+from .fieldset import Fieldset
+from .directives import field
+from .composite import CompositeField
+from .interfaces import _, null, Invalid, IVocabulary
 
 
 def takes_one_arg(fn, name):
